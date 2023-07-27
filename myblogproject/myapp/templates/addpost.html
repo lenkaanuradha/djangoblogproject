@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Add posts{% endblock title %}
+{% block content %}
+<div class="col-sm-10 text-white mx-5">
+    <h2 >Dashboard/Add Posts</h2>
+    <form action="" method="POST" novalidate>
+      {% csrf_token %}
+    {% if posts %}
+     {% for post in posts %}
+      <div >{{post.label_tag}}{{post}}{{post.errors|striptags}}</div> 
+     {% endfor %}
+    {% endif %}
+    <input type="submit" value="post" class="btn btn-success my-3">
+  </form>
+</div>
+{% endblock content %}

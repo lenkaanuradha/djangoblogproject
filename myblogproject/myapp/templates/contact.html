@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title  %} Contact {% endblock title%}
+
+{% block content %}
+<form>
+    <div class="mx-3 col-sm-5 my-2 text-white ">
+      <label for="exampleInputName1" class="form-label">Name</label>
+      <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+     
+    </div>
+    <div class="mx-3 col-sm-5 my-2 text-white ">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+      </div>
+      <div class="mx-3 col-sm-5 my-2 text-white ">
+        <label for="exampleInputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="exampleInputAddress" aria-describedby="addressHelp">
+      
+      </div>
+    
+    <div class="mx-3 col-sm-5 my-2 text-white ">
+        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    <button type="submit" class="btn btn-primary mx-3 my-3">Send</button>
+  </form>
+{% endblock content %}

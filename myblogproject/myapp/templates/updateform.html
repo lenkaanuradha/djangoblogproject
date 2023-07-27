@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Update Page{% endblock title %}
+
+ 
+{% block content %}
+
+<div class="col-sm-10 text-white mx-5">
+    <h2 class="my-3">Dashboard/Update Posts</h2>
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+    {% if posts %}
+      {% for field in posts %}
+        <div >{{field.label_tag}}{{field}}{{field.errors|striptags}}</div> 
+      {% endfor %}
+    {% endif %}
+    <input type="submit" value="Update" class="btn btn-success my-5">
+</form>
+</div>
+{% endblock content %}
